@@ -34,6 +34,9 @@ class GameScene: SKScene {
     
     // Create a property for the car
     var truck = SKSpriteNode(imageNamed: "truck")
+    //create the background
+    var ground = SKSpriteNode(imageNamed: "green")
+    var sky = SKSpriteNode(imageNamed: "blue")
     
     /*
     // Background music player
@@ -88,10 +91,17 @@ class GameScene: SKScene {
         //Change the result value to match the distance
         result = distance
         
+        //create the background
+        ground.position = CGPoint(x: 0, y: -500)
+        ground.setScale(2)
+        self.addChild(ground)
+        sky.position = CGPoint(x: 400, y: 600)
+        sky.setScale(2)
+        self.addChild(sky)
         // Position and add the truck
-        truck.position = CGPoint(x: 100, y: 50)
+        truck.position = CGPoint(x: 100, y: 100)
         self.addChild(truck)
-
+      
     }
     
     // This runs before each frame is rendered
