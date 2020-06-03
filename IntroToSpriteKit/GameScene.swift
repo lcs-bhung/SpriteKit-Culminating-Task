@@ -37,6 +37,7 @@ class GameScene: SKScene {
     //create the background
     var ground = SKSpriteNode(imageNamed: "green")
     var sky = SKSpriteNode(imageNamed: "blue")
+    var ramp = SKSpriteNode(imageNamed: "ramp")
     
     /*
     // Background music player
@@ -101,7 +102,9 @@ class GameScene: SKScene {
         // Position and add the truck
         truck.position = CGPoint(x: 100, y: 100)
         self.addChild(truck)
-      
+        //make the ramp appear
+        ramp.position = CGPoint(x: 720, y: 105)
+        self.addChild(ramp)
     }
     
     // This runs before each frame is rendered
