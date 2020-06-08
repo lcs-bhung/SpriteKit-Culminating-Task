@@ -105,6 +105,15 @@ class GameScene: SKScene {
         //make the ramp appear
         ramp.position = CGPoint(x: 720, y: 105)
         self.addChild(ramp)
+        
+        //Create physics body for the ramp
+        ramp.physicsBody = SKPhysicsBody(texture: ramp.texture!, size: ramp.size)
+        //Make the ramp not move
+        ramp.physicsBody?.isDynamic = false
+        
+        //Make the physics body for the truck
+        truck.physicsBody = SKPhysicsBody(texture: truck.texture!, size: truck.size)
+        
     }
     
     // This runs before each frame is rendered
