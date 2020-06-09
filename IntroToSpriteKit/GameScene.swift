@@ -114,6 +114,9 @@ class GameScene: SKScene {
         //Make the physics body for the truck
         truck.physicsBody = SKPhysicsBody(texture: truck.texture!, size: truck.size)
         
+      
+        
+           
     }
     
     // This runs before each frame is rendered
